@@ -2,9 +2,9 @@
 layout: post
 title: "生成编码：一种基于可计算序列的统一多尺度表征框架"
 date: 2025-11-01 10:00:00 +0800
-categories: [工程实践]
+categories: [理论原创]
 tags: [Jekyll, GitHub Pages, 博客]
-description: "从创建文章、插图、代码高亮到摘要与发布的一体化说明。"
+description: "宇宙的复杂性，或许只是简单规律的华丽衍生品。"
 # 可选：文章封面，用于社交卡片与 SEO（放到 /assets/img/ 下）
 # image: /assets/img/cover-writing-on-jekyll.png
 ---
@@ -13,7 +13,8 @@ description: "从创建文章、插图、代码高亮到摘要与发布的一体
 在受限函数族上，我们证明了基于条件柯尔莫哥洛夫复杂度的MDL优势上界。核心思想是将信息显式编码为"生成规律"而非"数据点"，在具有规律性的对象族上展示显著的描述长度优势与可验证的渐进细化特性。
 <!--more-->
 
-## 一、正文结构���议
+## 一、讨论一下生成编码
+
 当前数据表征范式面临的根本挑战可归结为：如何在有限的比特预算下，对本质连续的物理世界进行高质量、高分辨率与跨尺度的一致表征。神经隐式表示（如DeepSDF、SIREN、NeRF等）通过函数近似替代显式离散存储，已在多模态任务上取得成功；程序化生成通过算法规则创建内容，具备内在的紧凑性；然而，这些方法未能提供一个统一的数学框架，明确解释"规律性"如何转化为"码长优势"。
 本文提出"生成编码"（Generative Coding）：面对具有内在规律性的目标结构，我们认为其"最优表征成本"应由生成该结构的"最简计算过程"决定，而非由离散近似的存储开销决定。为此，我们建立三个技术支柱：
 •	规律驱动的可计算序列：使用短程序可生成的序列作为统一的跨尺度驱动源；
@@ -83,45 +84,6 @@ Lemp=max⁡S,S′∥GS−GS′∥∞δγ(S,S′)Lemp=S,S′maxδγ(S,S′)∥GS�
 •	权重生成器：共享参数的小网络实现 $w_i = \mathrm{Gen}_\theta(d_i,i)$ [4]
 •	可微MDL：权重用混合Logistic/Gaussian先验 [13]，序列用算术编码先验
 •	确定性变异：PRNG + 位置哈希 + 带通滤波，确保可复现
-
-## 二、插入图片
-将图片放入仓库的 `assets/img/` 目录，然后这样引用：
-![示例图片]({{ '/assets/img/demo.png' | relative_url }})
-
-## 三、代码高亮
-使用语言标注的代码��，Jekyll 的 Rouge 会自动高亮：
-```python
-def two_sum(nums, target):
-    m = {}
-    for i, x in enumerate(nums):
-        if target - x in m:
-            return m[target - x], i
-        m[x] = i
-    return None
-```
-
-## 四、内部链接与外部链接
-- 链接到站内其他文章（用 post_url，避免硬编码路径）：
-[Hello, Blog]({% post_url 2025-10-31-hello-world %})
-- 外部链接请用标准 Markdown：
-[GitHub Pages 文档](https://docs.github.com/pages)
-
-## 五、摘要与目录
-- 首页摘要默认取第一段，你也可以用 `<!--more-->` 分隔上方“摘要”和下方“正文”。
-- 目录可手写小目录，或后续加 TOC 插件（可选增强）。
-
-## 六、常见块
-> 引用块：提炼观点或结论。
-
-- 待办清单：
-  - [x] 写作模板
-  - [ ] 插入更多示例
-
-表格示例：
-| 项 | 值 |
-|---|---|
-| 构建系统 | GitHub Actions |
-| 主题 | minima |
 
 ## 七、���布与回滚
 - 写完后提交到 main 分支，GitHub Actions 会自动发布。
