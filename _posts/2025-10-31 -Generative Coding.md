@@ -85,6 +85,4 @@ Lemp=max⁡S,S′∥GS−GS′∥∞δγ(S,S′)Lemp=S,S′maxδγ(S,S′)∥GS�
 •	可微MDL：权重用混合Logistic/Gaussian先验 [13]，序列用算术编码先验
 •	确定性变异：PRNG + 位置哈希 + 带通滤波，确保可复现
 
-## 七、���布与回滚
-- 写完后提交到 main 分支，GitHub Actions 会自动发布。
-- 回滚：在 Git 历史中恢复上一个提交并推送。
+
