@@ -1,0 +1,35 @@
+title: "Zhenpeng 的技术博客"
+description: "记录工程实践、源码阅读、架构思考与工具技巧"
+url: "https://Zhenpeng1979.github.io"
+baseurl: ""   # 用户站点必须留空
+lang: zh-CN
+timezone: Asia/Shanghai
+
+theme: minima
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+author:
+  name: "Zhenpeng"
+  email: ""
+
+minima:
+  skin: auto
+  social_links:
+    - { platform: github, user_url: "https://github.com/Zhenpeng1979" }
+
+# 导航
+header_pages:
+  - about.md
+
+# Feed/SEO
+feed:
+  path: feed.xml
+
+# Markdown 与高亮
+markdown: kramdown
+kramdown:
+  input: GFM
+highlighter: rouge
