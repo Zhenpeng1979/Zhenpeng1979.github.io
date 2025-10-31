@@ -1,0 +1,10 @@
+---
+# Only the triple-dashed front matter enables Jekyll to process SCSS
+---
+
+@import "minima";
+
+/* 自定义样式示例：代码块字号略小 */
+.highlight pre, pre, code {
+  font-size: 0.95rem;
+}
